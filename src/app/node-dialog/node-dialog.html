@@ -1,0 +1,13 @@
+<button mat-icon-button style = "float: right;" [mat-dialog-close]="true">
+  <mat-icon class="close-icon" color="warn">close</mat-icon>
+</button>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Node Name" [(ngModel)]="data.nodeName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-stroked-button color="primary" [disabled]="!(data.nodeName)" [mat-dialog-close]="{nodeName: data.nodeName}" style="position: relative;left: 280px;">
+    {{data.Component}}
+  </button>
+</div>
